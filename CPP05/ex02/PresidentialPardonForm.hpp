@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:08:41 by smoreron          #+#    #+#             */
-/*   Updated: 2024/11/11 14:43:30 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:23:08 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -20,8 +20,10 @@ private:
     std::string m_target;
 
 public:
-    PresidentialPardonForm(std::string target);
-    virtual ~PresidentialPardonForm();
+	PresidentialPardonForm(std::string target);
+    PresidentialPardonForm(const PresidentialPardonForm& src);
+    PresidentialPardonForm& operator=(const PresidentialPardonForm& obj);
+    ~PresidentialPardonForm();
 
     void execute(const Bureaucrat &executor) const override;
 };

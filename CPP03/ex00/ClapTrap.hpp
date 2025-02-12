@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:27:45 by smoreron          #+#    #+#             */
-/*   Updated: 2024/10/04 14:38:41 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/10/09 00:33:47 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ClapTrap
 	int hitPoint;
 	int energyPoints;
 	int attackDamage;
-
+	
   public:
 	ClapTrap(std::string newName);
 	ClapTrap &operator=(const ClapTrap &other);

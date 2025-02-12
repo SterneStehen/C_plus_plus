@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 16:32:21 by smoreron          #+#    #+#             */
-/*   Updated: 2024/10/04 14:42:15 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/10/09 00:47:26 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ ScavTrap::ScavTrap(std::string newName) : ClapTrap(newName)
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap " << getName() << " destructed!" << std::endl;
+	std::cout << "Destructor ScavTrap is called!"  << std::endl;
 }
 
 void ScavTrap::attack(const std::string &target)
@@ -41,7 +41,7 @@ void ScavTrap::attack(const std::string &target)
 	setPoins(getHit(), getEnergy() - 1, getDamage());
 }
 
-void	guardGate(void)
+void	ScavTrap::guardGate(void)
 {
 	std::cout << " ScavTrap is now in Gate keeper mode" << std::endl;
 }

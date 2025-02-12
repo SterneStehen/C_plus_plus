@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 22:27:31 by smoreron          #+#    #+#             */
-/*   Updated: 2024/09/12 23:34:03 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/09/19 03:16:13 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ int main(int ac, char *av[])
 	std::string s1 = av[2];
 	std::string s2 = av[3];
 
-	if(s1.empty())
+	if(s1.empty() || s2.empty())
 	{
-		std::cerr << "error argument s1 can not be empty" << std::endl;
+		std::cerr << "error argument s1 s2 can not be empty" << std::endl;
 		return 1;
 	}
 	std::ifstream inFile(filename);
@@ -57,6 +57,11 @@ int main(int ac, char *av[])
 		std::cerr << "Error file" << std::endl;
 		return 1;
 	}
+	std::ifstream inFileTemp(filename);
+	std::getline(inFileTemp, line);
+	if (line.empty())
+		return (std::cout << "empty file\n", inFile.close(), inFileTemp.close() ,1);
+	
 	std::ofstream outFile(filename + ".replace");
 	if(!outFile.is_open())
 	{
@@ -66,7 +71,10 @@ int main(int ac, char *av[])
 	
 	while (std::getline(inFile, line))
 	{
+		
+			
 		newLine = getReplase(line, s1, s2);
+	
 		outFile << newLine << std::endl;
 	}
 	

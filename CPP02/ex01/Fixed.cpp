@@ -6,19 +6,29 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 18:52:51 by smoreron          #+#    #+#             */
-/*   Updated: 2024/09/16 21:39:00 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/09/19 17:42:39 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 
-Fixed::Fixed() : data(0)
+Fixed::Fixed() : data(0), bits(8)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
 
+Fixed::Fixed(int input): bits(8)
+{
+	data = (input << bits);
+	std::cout << "Int constructor called" << std::endl;
+}
 
+Fixed::Fixed(float input_float): bits(8)
+{
+	data = roundf(input_float * (1 << bits));
+	std::cout << "Float constructor called" << std::endl;
+}
 
 Fixed::~Fixed()
 {
@@ -27,7 +37,7 @@ Fixed::~Fixed()
 
 }
 
-Fixed::Fixed(const Fixed& other)
+Fixed::Fixed(const Fixed& other): bits(8)
 {
 	
 	//data = new int(*(other.data));
@@ -38,7 +48,7 @@ Fixed::Fixed(const Fixed& other)
 
 Fixed& Fixed::operator=(const Fixed& other2)
 {
-	std::cout << "Assignation operator called" << std::endl;
+	std::cout << "Copy assignment operator called" << std::endl;
 	if(this != &other2)
 		data = other2.getRawBits();
 	return *this;
@@ -63,22 +73,10 @@ int Fixed::getRawBits(void) const
 	return data;
 }
 
-Fixed::Fixed(int input)
-{
-	data = (input << bits);
-	std::cout << "Int constructor called" << std::endl;
-}
+
 int Fixed::toInt( void ) const
 {
 	return data >> bits;
-}
-
-
-
-Fixed::Fixed(float input_float)
-{
-	data = roundf(input_float * (1 << bits));
-	std::cout << "Float constructor called" << std::endl;
 }
 
 float Fixed::toFloat( void ) const

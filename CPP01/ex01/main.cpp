@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 13:33:57 by smoreron          #+#    #+#             */
-/*   Updated: 2024/09/11 13:39:56 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/09/19 01:42:41 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,12 @@ int main()
 	
 	if (horde)
 	{
-		for (size_t i = 0; i < N; i++)
+		for (int i = 0; i < N; i++)
 		{
-			std::cout << "horde number " << i << "  announce ";
+			std::cout << "horde number " << i << "  announce" << std::endl;
 			horde[i].announce();
 		}
 		delete[] horde;
-		std::cout << "aray is destoy " << std::endl;
 	}
 	return 0;
 }

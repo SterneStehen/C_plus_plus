@@ -6,13 +6,13 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 21:37:22 by smoreron          #+#    #+#             */
-/*   Updated: 2024/09/24 23:19:52 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/10/09 01:05:55 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 //#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "FragTrap.hpp" 
 
 
 FragTrap::FragTrap(std::string newName): ClapTrap(newName){

@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 23:18:06 by smoreron          #+#    #+#             */
-/*   Updated: 2024/09/24 23:20:13 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/10/09 01:06:12 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ScavTrap::ScavTrap(std::string newName) : ClapTrap(newName)
 {
 	//setName(newName);
-	setPoins(100, 50, 20);	
+	setPoins(100, 50, 20);	 
 	std::cout << "ScavTrap " << newName << " constructed!" << std::endl;
 }
 

@@ -17,21 +17,31 @@
 #include <iostream>
 
 int main() {
+	try{
     Bureaucrat alice("Alice", 1);
     Bureaucrat bob("Bob", 50);
 
-    ShrubberyCreationForm form1("Home");
-    RobotomyRequestForm form2("Target");
-    PresidentialPardonForm form3("Someone");
+    ShrubberyCreationForm Shrubbery("Home");
+    RobotomyRequestForm Robot("Target");
+    PresidentialPardonForm Presid("Someone");
+	
+	std::cout << "==================Shrubbery==============" << std::endl;
+    Shrubbery.beSigned(alice);
+    alice.executeForm(Shrubbery);
 
-    form1.beSigned(alice);
-    alice.executeForm(form1);
+	std::cout << "==================Robot==============" << std::endl;
+    Robot.beSigned(alice);
+    alice.executeForm(Robot);
 
-    form2.beSigned(alice);
-    alice.executeForm(form2);
-
-    form3.beSigned(alice);
-    alice.executeForm(form3);
+	std::cout << "==================Presid==============" << std::endl;
+    Presid.beSigned(alice);
+    alice.executeForm(Presid);
+	} 
+	catch (const std::exception& ex) 
+	{
+        std::cerr<< "exception" << ex.what() << std::endl;
+    }
 
     return 0;
 }
+    

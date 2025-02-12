@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 14:39:20 by smoreron          #+#    #+#             */
-/*   Updated: 2024/10/04 14:39:45 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/10/09 00:43:35 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : public ClapTrap 
 {
   private:
 	/* data */

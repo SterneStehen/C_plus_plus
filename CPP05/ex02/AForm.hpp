@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 13:55:27 by smoreron          #+#    #+#             */
-/*   Updated: 2024/11/13 00:34:49 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:22:20 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -23,11 +23,15 @@ class AForm {
 private:
     const std::string m_name;
     bool m_isSigned;
+
     const int m_signGrade;
     const int m_execGrade;
 
 public:
-    AForm(std::string name, int signGrade, int execGrade);
+  	AForm();
+    AForm(const std::string& name, int signGrade, int execGrade);
+    AForm(const AForm& src); 
+    AForm& operator=(const AForm& obj);
     virtual ~AForm();
 
     const std::string &getName() const;

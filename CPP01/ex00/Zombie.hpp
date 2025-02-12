@@ -23,15 +23,8 @@ private:
 public:
 	Zombie();
 	~Zombie();
-	void announce( void )
-	{
-		std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-	}
-	void setName(std::string NewName)
-	{
-		name = NewName;
-		std::cout << "Set name: " << name << std::endl;
-	}
+	void announce( void );
+	void setName(std::string NewName);
 };
 
 void randomChump( std::string name );

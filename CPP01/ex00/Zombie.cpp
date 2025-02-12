@@ -20,8 +20,14 @@ Zombie::~Zombie()
 	std::cout << "Destriy Zombie: " << name << std::endl;
 }
 
-
-
-
+void Zombie::announce( void )
+{
+	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+void Zombie::setName(std::string NewName)
+{
+	name = NewName;
+	std::cout << "Set name: " << name << std::endl;
+}
 
 

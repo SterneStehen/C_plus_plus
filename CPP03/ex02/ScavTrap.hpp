@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 23:18:19 by smoreron          #+#    #+#             */
-/*   Updated: 2024/09/24 23:18:20 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/10/09 01:00:24 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class ScavTrap: public ClapTrap
 {
-private:
+private: 
 	/* data */
 public:
 	ScavTrap(std::string newName);

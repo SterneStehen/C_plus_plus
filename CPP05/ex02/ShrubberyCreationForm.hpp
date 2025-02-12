@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:35:07 by smoreron          #+#    #+#             */
-/*   Updated: 2024/11/13 00:35:07 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:24:37 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -22,9 +22,12 @@ private:
 
 public:
     ShrubberyCreationForm(std::string target);
-    virtual ~ShrubberyCreationForm();
+    ShrubberyCreationForm(const ShrubberyCreationForm& src);
+    ShrubberyCreationForm& operator=(const ShrubberyCreationForm& obj);
+    ~ShrubberyCreationForm();
 
     void execute(const Bureaucrat &executor) const override;
 };
 
 #endif
+    

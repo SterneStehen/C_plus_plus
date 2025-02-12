@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 01:00:08 by smoreron          #+#    #+#             */
+/*   Updated: 2024/10/09 01:00:09 by smoreron         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
@@ -9,17 +21,18 @@ int main()
 	FragTrap F("Fedir2");
 	F.annonce();
 	F.highFivesGuys();
+	F.takeDamage(30);
 	
 	// ClapTrap clap("Clappy");
 
     // clap.attack("Enemy");
     // clap.takeDamage(5);
     // clap.beRepaired(3);
-    // clap.annonce();
 
-    // clap.takeDamage(10);  // 
-    // clap.attack("Enemy"); // 
-    // clap.beRepaired(5);   //
+
+    // clap.takeDamage(10); 
+    // clap.attack("Enemy");
+    // clap.beRepaired(5);
 
     // ScavTrap scav("Scavvy");
 
@@ -28,8 +41,7 @@ int main()
     // scav.beRepaired(20);
     // scav.annonce();
 
-    // Вызов специальной способности ScavTrap
-	//scav.guardGate();
+	// scav.guardGate();
 
     // scav.takeDamage(100);
     // scav.attack("Enemy");
@@ -38,25 +50,3 @@ int main()
     return 0;
 }
 
-
-
-// int main()
-// {
-// 	ClapTrap Vova("Vova");
-// 	ClapTrap Sergii("Sergii");
-// 	ScavTrap Andrey("Andrey");
-
-// 	Vova.takeDamage(3);
-// 	Vova.annonce();
-
-// 	Sergii.attack("Vova");
-// 	Vova.beRepaired(2);
-// 	Vova.attack("Sergii");
-// 	Vova.attack("Sergii");
-// 	Andrey.beRepaired(5);
-// 	Andrey.takeDamage(9);
-// 	Andrey.annonce();
-// 	Vova.takeDamage(9);
-
-// 	return 0;
-// }

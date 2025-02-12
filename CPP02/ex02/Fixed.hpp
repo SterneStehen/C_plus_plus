@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 23:25:03 by smoreron          #+#    #+#             */
-/*   Updated: 2024/09/17 22:19:53 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/09/19 17:49:50 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Fixed
 {
   private:
 	int data;
-	const int bits = 8;
+	const int bits;
 
   public:
 	Fixed();

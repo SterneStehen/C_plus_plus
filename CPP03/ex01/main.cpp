@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 19:42:05 by smoreron          #+#    #+#             */
-/*   Updated: 2024/10/04 14:39:03 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/10/09 00:46:23 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,20 @@
 
 int	main(void)
 {
-	ClapTrap clap("Clappy");
-	clap.attack("Enemy");
-	clap.takeDamage(5);
-	clap.beRepaired(3);
-	clap.annonce();
-	clap.takeDamage(10);
-	clap.attack("Enemy");
-	clap.beRepaired(5);
+	// ClapTrap clap("Clappy");
+	// clap.attack("Enemy");
+	// clap.takeDamage(5);
+	// clap.beRepaired(3);
+	// clap.annonce();
+	// clap.takeDamage(10);
+	// clap.attack("Enemy");
+	// clap.beRepaired(5);
+
+	
 	ScavTrap scav("Scavvy");
 	scav.attack("Enemy");
 	scav.takeDamage(50);
 	scav.beRepaired(20);
-	scav.annonce();
-	// Вызов специальной способности ScavTrap
-	// scav.guardGate();
 	scav.takeDamage(100);
 	scav.attack("Enemy");
 	scav.beRepaired(50);

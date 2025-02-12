@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 01:00:17 by smoreron          #+#    #+#             */
+/*   Updated: 2024/10/09 01:00:33 by smoreron         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "ScavTrap.hpp"
 
@@ -29,7 +41,7 @@ void ScavTrap::attack(const std::string &target)
 	setPoins(getHit(), getEnergy()-1, getDamage());
 }
 
-void guardGate()
+void ScavTrap::guardGate()
 {
 	std::cout << " ScavTrap is now in Gate keeper mode" << std::endl;
 }

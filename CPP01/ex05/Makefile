@@ -1,19 +1,22 @@
-CC = g++
-CFLAGS = -Wall -Wextra -Werror
-NAME = harl
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp Harl.cpp
-OBJ = $(SRC:.cpp=.o)
+NAME = Harl
+
+SRCS = main.cpp Harl.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+

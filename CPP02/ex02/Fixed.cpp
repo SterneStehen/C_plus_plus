@@ -6,30 +6,30 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 21:41:13 by smoreron          #+#    #+#             */
-/*   Updated: 2024/09/17 22:19:49 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/09/19 17:50:54 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed() : data(0)
+Fixed::Fixed() : data(0), bits(8)
 {
 	// std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(int input)
+Fixed::Fixed(int input) : bits(8)
 {
 	data = (input << bits);
 	// std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(float input_float)
+Fixed::Fixed(float input_float) : bits(8)
 {
 	data = roundf(input_float * (1 << bits));
 	// std::cout << "Float constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &other)
+Fixed::Fixed(const Fixed &other) : bits(8)
 {
 	// data = new int(*(other.data));
 	// std::cout << "Copy constructor called" << std::endl;

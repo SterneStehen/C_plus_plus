@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 22:05:22 by smoreron          #+#    #+#             */
-/*   Updated: 2024/09/24 22:24:49 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/10/09 01:00:01 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
-
+ 
 class FragTrap : public ClapTrap
 {
 public:

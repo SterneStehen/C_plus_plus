@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 23:04:13 by smoreron          #+#    #+#             */
-/*   Updated: 2024/09/30 12:58:06 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/10/09 00:28:29 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ private:
     std::string name;
 
 public:
-    DiamondTrap(const std::string &newName);  // Accept const reference
+    DiamondTrap(const std::string &newName);
     ~DiamondTrap();
 
     void attack(const std::string &target);
     void whoAmI();
-    void takeDamage(unsigned int amount);      // Added this
-    void beRepaired(unsigned int amount);      // Added this
+    void takeDamage(unsigned int amount);
+    void beRepaired(unsigned int amount);
 };
 
 #endif

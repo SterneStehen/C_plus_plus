@@ -6,7 +6,7 @@
 /*   By: smoreron <7353718@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 12:54:21 by smoreron          #+#    #+#             */
-/*   Updated: 2024/09/11 13:39:41 by smoreron         ###   ########.fr       */
+/*   Updated: 2024/09/19 01:45:01 by smoreron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Zombie* zombieHorde( int N, std::string name )
 	for (int i = 0; i < N; i++)
 	{
 		horde[i].setName(name);
-		std::cout << "add NewName in func zombieHorde: " << name << " namber: " << i << std::endl;
+		//std::cout << "add NewName in func zombieHorde: " << name << " namber: " << i << std::endl;
 	}
 	return horde;
 }

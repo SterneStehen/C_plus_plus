@@ -14,8 +14,7 @@
 
 int main()
 {
-	Zombie* FOO;
-	FOO = newZombie("Foo");
+	Zombie *FOO = newZombie("Foo");
 	FOO->announce();
 	delete FOO;
 	randomChump("Next");
